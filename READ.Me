@@ -1,0 +1,24 @@
+note:
+编译proto文件
+生成.go文件
+```
+cd protobuf
+protoc --go_out=plugins=grpc:. ./*.proto
+
+````
+
+编译客户端
+cd client 
+go build 
+./client 
+
+编译服务端代码
+cd server
+go build 
+运行三个服务实例
+./server -port=50001
+./server -port=50002
+./server -port=50003
+
+
+ 
